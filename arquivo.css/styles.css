@@ -84,18 +84,20 @@ footer .footer-content {
     padding: 20px;
 }
 
-footer .social-icons {
+.social-icons {
     margin-top: 10px;
 }
 
-footer .social-icons i {
+ .social-icons i {
     font-size: 24px;
     color: #f0d28b;
     margin: 0 10px;
     transition: color 0.3s ease;
+    text-align: center;
+
 }
 
-footer .social-icons i:hover {
+.social-icons i:hover {
     color: #d4af37;
 }
 
