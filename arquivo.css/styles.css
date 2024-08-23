@@ -142,12 +142,60 @@ footer p {
     margin-left: auto;
     margin-right: auto;
 }
+/* Estilo para os modais */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7); /* Fundo semitransparente */
+    opacity: 0;/* transição suave */
+    transition: opacity 0.3s ease;/* transição suave */
+}
+/* transição suave */
+.modal.show {
+    opacity: 1;
+}
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: auto;
+    border-radius: 8px;
+    color: #d4af37;
+    animation: fadeIn 0.5s ease-in-out;/*Animação da caixa de dialogo*/
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes fadeIn {/*Animação da caixa de dialogo*/
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 /* Responsividade para tablets e telas menores */
 @media (max-width: 768px) {
     header .logo {
         width: 100px;
-        left: 10px;    
+        left: 10px;
         top: 5px;
     }
 
