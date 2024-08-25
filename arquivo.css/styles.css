@@ -193,11 +193,11 @@ footer p {
     text-decoration: none;
     cursor: pointer;
 }
-@keyframes fadeIn {/*Animação da caixa de dialogo*/
+@keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
-/* Responsividade para tablets e telas menores */
+
 @media (max-width: 768px) {
     header .logo {
         width: 100px;
@@ -224,16 +224,24 @@ footer p {
     }
 }
 
-/* Responsividade para smartphones e telas muito pequenas */
 @media (max-width: 480px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
     header .logo {
-        width: 80px;
-        left: 5px;
-        top: 2px;
+        width: 50px;
+        position: static; 
+        margin-bottom: 10px;
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.4em; 
+        text-align: center; 
+        margin: 0; 
     }
 
     header nav ul {
@@ -264,3 +272,5 @@ footer p {
         font-size: 20px;
     }
 }
+
+
