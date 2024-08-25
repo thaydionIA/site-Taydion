@@ -86,7 +86,6 @@ footer .footer-content {
 
 .social-icons {
     margin-top: 10px;
-    text-align: center;
 }
 
  .social-icons i {
@@ -176,9 +175,7 @@ footer p {
     color: #d4af37;
     animation: fadeIn 0.5s ease-in-out;
 }
-.modal-content h2 {
-    text-align: center;
-}
+
 
 .close {
     color: #aaa;
