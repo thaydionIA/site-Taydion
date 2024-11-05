@@ -11,31 +11,33 @@ header {
     color: #f0f0f0;
     padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
+    flex-wrap: wrap;
 }
 
 header .logo {
-    width: 100px;
-    position: absolute;
-    left: 20px;
-    top: 10px;
+    width: 80px;
 }
 
 header h1 {
-    margin: 0;
     font-size: 2.5em;
     color: #f0d28b;
+    margin: 0;
 }
 
 header nav ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
 }
 
 header nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 header nav ul li a {
@@ -50,22 +52,18 @@ header nav ul li a {
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #f0d28b;
 }
 
-.content-history {
-    color: #f0d28b; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    font-weight: bold; 
-    margin-bottom: 20px; 
-}
 .title-history {
-    color: #ac7d1f; 
+    color: #ac7d1f;
 }
-
 
 .product-list {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .product-item {
@@ -74,8 +72,9 @@ header nav ul li a {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 30%;
+    flex: 1 1 300px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
 }
 
 footer {
@@ -83,8 +82,6 @@ footer {
     color: #f0d28b;
     text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
     width: 100%;
     margin-top: 20px;
 }
@@ -92,20 +89,17 @@ footer {
 footer .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .social-icons {
     margin-top: 10px;
 }
 
- .social-icons i {
+.social-icons i {
     font-size: 24px;
     color: #f0d28b;
     margin: 0 10px;
     transition: color 0.3s ease;
-    text-align: center;
-
 }
 
 .social-icons i:hover {
@@ -172,6 +166,7 @@ footer p {
 
 .modal.show {
     opacity: 1;
+    display: block;
 }
 
 .modal-content {
@@ -200,24 +195,32 @@ footer p {
     text-decoration: none;
     cursor: pointer;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
     header .logo {
-        width: 100px;
-        left: 10px;
-        top: 5px;
+        width: 60px;
+        margin-bottom: 10px;
     }
 
     header h1 {
         font-size: 2em;
     }
 
-    header nav ul li {
-        margin: 0 10px;
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     .product-list {
@@ -229,41 +232,19 @@ footer p {
         width: 80%;
         margin-bottom: 20px;
     }
+
+    .social-icons i {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 480px) {
     header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         padding: 10px;
     }
 
-    header .logo {
-        width: 50px;
-        position: static; 
-        margin-bottom: 10px;
-    }
-
     header h1 {
-        font-size: 1.4em; 
-        text-align: center; 
-        margin: 0; 
-    }
-
-    header nav ul {
-        padding-top: 10px;
-    }
-
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .content-section {
-        padding: 20px;
-        margin: 10px;
+        font-size: 1.6em;
     }
 
     .product-item {
@@ -271,13 +252,7 @@ footer p {
         margin-bottom: 15px;
     }
 
-    footer .footer-content {
-        padding: 15px;
-    }
-
     .social-icons i {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
-
-
