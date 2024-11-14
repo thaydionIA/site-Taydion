@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaydion.IA</title>
     <link rel="stylesheet" href="assets/css/styles.css">                             
-    <script src="assets/js/scripts.js"></script>
-    <link rel="icon" href="assets/images/LogoAT.ico" type="image/x-icon">
+    <script src="static/js/scripts.js"></script>
+    <link rel="icon" href="static/images/LogoAT.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -103,8 +103,12 @@
         </div>
     </div>
 
-        <section id="historia" class="content-history">
-            <h2 class="title-history">Nossa História</h2>
+    <section id="historia" class="content-history">
+        <h2 class="title-history">
+            Nossa História
+            <button id="toggleHistoria" onclick="toggleHistoria()">Maximizar</button>
+        </h2>
+        <div id="conteudoHistoria" style="display: none;">
             <p>Somos um grupo de desenvolvedores apaixonados por tecnologia...</p>
             <h2 class="title-history">Missão, Visão e Valores</h2> 
             <p><strong class="title-history">Missão:</strong> Revolucionar o mercado local com soluções tecnológicas e inovação em sistemas com integração a IA (Inteligência Artificial). Desenvolver sistemas completos para Web e Desktops, criando soluções tecnológicas que não apenas atendam às necessidades atuais, mas também contribuam para um futuro mais sustentável.</p>
@@ -136,6 +140,8 @@
         
             <h2 class="title-history">Cultura e Ambiente de Trabalho</h3>
             <p>O ambiente interno mantém a hierarquia dos fundadores. O trabalho é dividido entre os quatro membros, que têm aptidão para o desenvolvimento de códigos e soluções para o mercado. Valores como compromisso, pontualidade e responsabilidade são enfatizados.</p>
+        
+        </div>
         </section>
         
     </section>
@@ -143,9 +149,27 @@
     <section id="produtos" class="content-section">
         <h2>Nossos Produtos</h2>
         <div class="product-list">
-            <div class="product-item">Produto 1</div>
-            <div class="product-item">Produto 2</div>
-            <div class="product-item">Produto 3</div>
+            <div class="product-item">
+                <img src="assets/images/M1.png" alt="Modelo 1" class="product-image">
+                <h3>Modelo de Site Responsivo</h3>
+                <p>Descrição: Este modelo de site foi projetado para atender a uma ampla gama de profissionais e empresas que buscam uma presença online moderna e eficaz. Com um design responsivo e flexível, ele se adapta facilmente a diferentes nichos de mercado, seja para pequenos negócios, consultórios, freelancers ou empresas maiores, garantindo que suas informações sejam apresentadas de forma clara e profissional.</p>
+                <a href="https://thaydionia.github.io/Site-Coringa/" class="btn" target="_blank">Visualizar Modelo</a>
+            </div>
+            <div class="product-item">
+                <img src="assets/images/M3.png" alt="Modelo 2" class="product-image">
+                <h3>Modelo de Site Responsivo</h3>
+                <p>Descrição: Este modelo de site foi projetado para atender a uma ampla gama de profissionais e empresas que buscam uma presença online moderna e eficaz. Com um design responsivo e flexível, ele se adapta facilmente a diferentes nichos de mercado, seja para pequenos negócios, consultórios, freelancers ou empresas maiores, garantindo que suas informações sejam apresentadas de forma clara e profissional.</p>
+                <a href="https://thaydionia.github.io/Site-Coringa/" class="btn" target="_blank">Visualizar Modelo</a>
+
+            </div>
+            <div class="product-item">
+                <img src="assets/images/M2.png" alt="Modelo 3" class="product-image">
+                <h3>Modelo de Site Responsivo</h3>
+                <p>Descrição: uma plataforma inovadora que oferece aos usuários a facilidade de explorar menus digitais, realizar pedidos online e efetuar compras de forma rápida e segura. Ideal para restaurantes, lanchonetes e outros estabelecimentos, nosso sistema intuitivo permite que você adicione produtos ao carrinho, visualize preços atualizados e finalize suas compras com apenas alguns cliques. Aproveite uma experiência de compra prática e moderna, adaptada para todos os dispositivos!</p>
+                <a href="https://github.com/thaydionIA/cardapio-dinamico.git" class="btn" target="_blank">Visualizar Modelo</a>
+
+            </div>
+            
         </div>
     </section>
 
@@ -161,6 +185,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/historia.js"></script>
 
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
