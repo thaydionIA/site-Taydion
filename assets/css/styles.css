@@ -386,3 +386,110 @@ button#toggleHistoria {
 button#toggleHistoria:hover {
     background-color: #ffbf00;
 }
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #f0d28b;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Garante largura total */
+    margin-top: 20px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; /* Ajusta padding */
+    }
+
+    footer .footer-content {
+        padding: 10px; /* Ajusta o conteúdo interno */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Ajuste final para telas pequenas */
+    }
+
+    footer .footer-content {
+        text-align: center; /* Centraliza todo o texto */
+        padding: 5px;
+    }
+
+    .social-icons i {
+        font-size: 20px; /* Ajusta ícones */
+    }
+}
+
+
+
+
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaço uniforme entre os produtos */
+    padding: 10px;
+    box-sizing: border-box; /* Garante que padding não afete o tamanho total */
+}
+
+.product-item {
+    background-color: #444;
+    color: #f0d28b;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: calc(33.33% - 20px); /* Três produtos por linha com espaço */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Efeito ao passar o mouse */
+}
+
+.product-image {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
+    border-radius: 5px; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 20px); /* Dois produtos por linha */
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Um produto por linha */
+        margin: 10px 0;
+    }
+}
