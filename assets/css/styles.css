@@ -393,7 +393,10 @@ button#toggleHistoria:hover {
 
 
 
-
+.title-produtos {
+    color: #f0d28b;
+    text-align: center; 
+}
 
 footer {
     background-color: #333;
